@@ -91,7 +91,7 @@ The interaction method to use - CSS animation or traditional JavaScript interact
 
 **kami** `(string)` 
 
-The CSS selector for the elements to use as the _kami_ elements for the _opened_ and _closed_ states of your _Origami_. Default is `""> .kami"`.
+The CSS selector for the elements to use as the _kami_ elements for the _opened_ and _closed_ states of your _Origami_. Default is `"> .kami"`.
 
 **speed** `(integer)` 
 
