@@ -163,12 +163,12 @@ var Origami = function( el, params ) {
                 $kami.data( '$shadow', $shadow );
 
             // Peek wrapper
-            $peek.wrap( '<div class="kami-peek-mask" />' )
+            $peek.wrap( '<div class="kami-peek-mask" />' );
             var $peekMask = $peek.parent();
                 $kami.data( '$peekMask', $peekMask );
 
             // Kami wrapper
-            $kami.wrap( '<div class="kami-mask" />' )
+            $kami.wrap( '<div class="kami-mask" />' );
             var $kamiMask = $kami.parent();
                 $kami.data( '$kamiMask', $kamiMask );
 
