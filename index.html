@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Origami Prototype</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Origami Prototype support stylesheet for basic structure handling -->
+        <link rel="stylesheet" href="origami.css">
+
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+
+                color: #333;
+                font: normal 10px/1.67 sans-serif;
+            }
+            h1 { font-size: 2.4em; }
+            h2 { font-size: 1.8em; }
+            h3 { font-size: 1.4em; }
+            h4 { font-size: 1.2em; }
+            h5 { font-size: 1em; }
+            h6 { font-size: 0.8em; }
+
+            body > header {
+                margin: 0 auto;
+                width: 530px;
+            }
+            body > header p {
+                font-size: 1.4em;
+            }
+
+            section {
+                position: relative;
+                padding: 40px;
+                margin: 40px auto;
+                width: 450px;
+
+                border: 1px solid #ddd;
+                border-radius: 5px;
+
+                -o-box-shadow: rgba(0,0,0,0.25) 0 2px 10px;
+                -ms-box-shadow: rgba(0,0,0,0.25) 0 2px 10px;
+                -moz-box-shadow: rgba(0,0,0,0.25) 0 2px 10px;
+                -webkit-box-shadow: rgba(0,0,0,0.25) 0 2px 10px;
+                box-shadow: rgba(0,0,0,0.25) 0 2px 10px;
+            }
+
+            section header h2 {
+                margin: 0 0 10px;
+                padding: 0 0 10px;
+                border-bottom: 1px solid #eee;
+            }
+            section header p { font-size: 1.4em; }
+
+            section pre {
+                padding: 9.5px;
+                margin: 0 0 20px;
+                
+                background-color: #f5f5f5;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                color: #444;
+                font-size: 1.2em;
+                word-break: break-all;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+            }
+
+            /* ==========================================================================
+               Origami Content customization
+               ========================================================================== */
+            .origami {
+                /* You must specify at least a height on the origami */
+                width: 320px;
+                height: 220px;
+                
+                margin: 0 auto;
+
+                color: #484745;
+                border-top: 1px solid white;
+                border-right: 1px solid #dad8d3;
+                border-bottom: 1px solid #dad8d3;
+            }
+
+            .origami p {
+                font-size: 1.2em;
+                text-align: center;
+            }
+            .origami p strong { font-size: 1.3em; }
+
+            .origami img {
+                position: relative;
+                display: block;
+                margin: 75px auto 0;
+                height: 70px;
+
+                color: #f04831;
+                line-height: 100px;
+            }
+
+            .origami .origami-content {
+                color: white;
+                background-color: #484745;
+            }
+
+            .origami .origami-content img {
+                position: relative;
+                display: block;
+                margin: 40px auto 20px;
+                height: 50px;
+
+                color: #f04831;
+            }
+
+            .origami .origami-content p { margin: 0 12.5%; }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <h1>Origami Prototype</h1>
+            <p>Below you will find examples of Origami implementations demonstrating the various ways you can deploy Origami.</p>
+            <p>Please view the source of this file for more information about the markup structure</p>
+        </header>
+
+        <section>
+            <header>
+                <h2>Out of the box implementation</h2>
+                <p>With the exception of some basic styling of the content within the Origami block, this is an out-of-the-box implementation.</p>
+                <h3>JavaScript:</h3>
+                <pre><code>$('.origami').origami();</code></pre>
+            </header>
+
+            <article>
+                <div id="origami-standard" class="origami">
+                    <div class="kami">
+                        <img src="origami.png">
+                    </div>
+
+                    <div class="kami origami-content">
+                        <img src="origami.png">
+                        <p><strong>Origami Prototype</strong></p>
+                        <p>Unfold and reveal your content with an intuitive, delightful interaction and design.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <header>
+                <h2>HTML5 data attribute overrides</h2>
+                <p>Set options and override defaults with HTML5 data attributes.</p>
+                <h3>JavaScript:</h3>
+                <pre><code>$('.origami').origami();</code></pre>
+                <h3>Origami element HTML:</h3>
+                <pre><code>&lt;div class="origami" data-touch="on" data-speed="1000">
+...
+&lt;/div></code></pre>
+            </header>
+
+            <article>
+                <div id="origami-html5" class="origami" data-touch="on" data-speed="1000">
+                    <div class="kami">
+                        <div class="logo">
+                            <img src="origami.png">
+                        </div>
+                    </div>
+
+                    <div class="kami origami-content">
+                        <img src="origami.png">
+                        <p><strong>Origami Prototype</strong></p>
+                        <p>Unfold and reveal your content with an intuitive, delightful interaction and design.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <header>
+                <h2>JavaScript specified options</h2>
+                <p>Set options using JavaScript by passing a JSON formatted JavaScript Object.</p>
+                <h3>JavaScript:</h3>
+                <pre><code>$('.origami').origami({
+    touch: true,
+    speed: 500
+});</code></pre>
+            </header>
+
+            <article>
+                <div id="origami-javascript" class="origami">
+                    <div class="kami">
+                        <div class="logo">
+                            <img src="origami.png">
+                        </div>
+                    </div>
+
+                    <div class="kami origami-content">
+                        <img src="origami.png">
+                        <p><strong>Origami Prototype</strong></p>
+                        <p>Unfold and reveal your content with an intuitive, delightful interaction and design.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- jQuery from Google's CDN -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="jquery-1.9.1.min.js" type="text/javascript"><\/script>')</script>
+
+        <!-- The Origami Prototype JavaScript - use this version in development only, for production use the below origami.js-->
+        <script src="origami.dev.js"></script>
+        <!-- production version compressed using http://javascriptcompressor.com/ -->
+        <!-- <script src="origami.js"></script> -->
+
+        <script>
+            $(function(){
+                // Out of the box implementation example
+                $('#origami-standard').origami();
+
+                // HTML5 data attribute overrides example
+                $('#origami-html5').origami();
+
+                // JavaScript specified options example
+                $('#origami-javascript').origami({
+                    touch: true,
+                    speed: 500
+                });
+            });
+        </script>
+    </body>
+</html>
